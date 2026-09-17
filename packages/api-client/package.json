@@ -1,0 +1,37 @@
+{
+  "name": "@uride/api-client",
+  "version": "0.0.0",
+  "private": true,
+  "description": "Typed REST client + TanStack Query hooks for the WeRide core API. Generated from OpenAPI in later phases.",
+  "main": "./dist/index.js",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.js"
+    }
+  },
+  "files": ["dist", "src"],
+  "scripts": {
+    "build": "tsup src/index.ts --format esm,cjs --dts --clean",
+    "dev": "tsup src/index.ts --format esm,cjs --dts --watch",
+    "lint": "eslint .",
+    "typecheck": "tsc --noEmit",
+    "test": "echo 'api-client: no tests yet'",
+    "clean": "rimraf dist .turbo",
+    "generate:openapi": "echo 'TODO: openapi-typescript ../../apps/api/openapi.json -o src/generated/schema.ts'"
+  },
+  "dependencies": {
+    "@uride/types": "*",
+    "@uride/validation": "*"
+  },
+  "devDependencies": {
+    "@uride/config": "*",
+    "eslint": "^9.17.0",
+    "rimraf": "^6.0.1",
+    "tsup": "^8.3.5",
+    "typescript": "^5.7.2"
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "extends": "@uride/config/tsconfig/react-library.json",
+  "compilerOptions": {
+    "noEmit": true,
+    "jsx": "react-jsx"
+  },
+  "include": ["src/**/*"],
+  "exclude": ["node_modules"]
+}

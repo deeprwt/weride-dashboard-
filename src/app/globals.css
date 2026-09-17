@@ -1,0 +1,45 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/*
+ * Semantic color variables — the bridge between @uride/ui-tokens and Tailwind's
+ * `bg-bg`, `text-text`, etc. Swap modes by toggling the `dark` class on <html>.
+ *
+ * Values are RGB triplets (no `rgb()` wrapper) so Tailwind's `<alpha-value>`
+ * works: `bg-bg/50` becomes `rgb(var(--color-bg) / 0.5)`.
+ */
+:root {
+  --color-bg: 250 250 250;
+  --color-surface: 255 255 255;
+  --color-surface-muted: 244 244 245;
+  --color-border: 228 228 231;
+  --color-text: 24 24 27;
+  --color-text-muted: 113 113 122;
+  --color-primary: 8 145 178;
+  --color-primary-text: 255 255 255;
+  --color-accent: 245 158 11;
+}
+
+.dark {
+  --color-bg: 9 9 11;
+  --color-surface: 24 24 27;
+  --color-surface-muted: 39 39 42;
+  --color-border: 39 39 42;
+  --color-text: 250 250 250;
+  --color-text-muted: 161 161 170;
+  --color-primary: 34 211 238;
+  --color-primary-text: 9 9 11;
+  --color-accent: 251 191 36;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  font-family: var(--font-sans, system-ui), sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
